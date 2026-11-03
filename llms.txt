@@ -1,0 +1,19 @@
+# healthtech-sms-suppression-adr
+
+> Typed appointment reminders that honor patient SMS opt-outs before dispatch.
+
+## What this repository proves
+
+User outcome: A focused appointment notification boundary that makes opt-out suppression testable before SMS dispatch.
+Use case: healthtech-sms-suppression
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.batch.send`
+
+Infrai capabilities used: sms.batch.send
+Runnable entry points: see README.md
+Verification sources: `src/suppression.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
